@@ -14,7 +14,9 @@
     "build-back": "cd backend  && npm install && npm run build",
     "backend": "cd backend && npm run start",
     "deploy": "npm-run-all build-front backend",
-    "start": "npm-run-all --parallel backend front"
+    "serve-front": "cd frontend && serve -s build",
+    "start": "npm-run-all --parallel backend front",
+    "serve-all": "npm-run-all --parallel serve-front backend"
   },
   "dependencies": {
     "npm-run-all": "^4.1.5"
